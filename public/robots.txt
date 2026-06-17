@@ -1,0 +1,24 @@
+# https://www.cleankrd23.ru
+User-agent: *
+Allow: /
+Disallow: /privacy
+
+# Защита от переиндексации технических параметров
+Disallow: /*?utm_*
+Disallow: /*?fbclid=*
+Disallow: /*?gclid=*
+Disallow: /*?yclid=*
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Disallow: /privacy
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&yclid&gclid&fbclid
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+Disallow: /privacy
+
+Host: https://www.cleankrd23.ru
+Sitemap: https://www.cleankrd23.ru/sitemap.xml

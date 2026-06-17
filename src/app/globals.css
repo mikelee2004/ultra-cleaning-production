@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+
+/* ── Кастомные CSS-переменные бренда ─────────────────────────────────────── */
+:root {
+  --brand-red:       #A70000;
+  --brand-red-light: #FEE2E2;
+  --brand-dark:      #1C2B3A;
+  --brand-slate:     #64748B;
+  --brand-border:    #F1F5F9;
+  --brand-bg:        #F9FAFB;
+}
+
+/* ── Сброс и базовые стили ───────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  color: var(--brand-dark);
+  background: #fff;
+}
+
+/* ── Анимации ────────────────────────────────────────────────────────────── */
+
+/* Shimmer — skeleton loading (NewsSection) */
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Partners marquee */
+@keyframes partnersScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Testimonials scroll */
+@keyframes testimonialsScroll {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+/* ── Утилиты ─────────────────────────────────────────────────────────────── */
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.partners-track {
+  animation: partnersScroll 20s linear infinite;
+}
+
+.testimonials-track {
+  animation: testimonialsScroll var(--duration, 20s) linear infinite;
+}
+
+/* ── Кастомный range input ───────────────────────────────────────────────── */
+input[type='range'] {
+  accent-color: var(--brand-red);
+}
+
+/* ── Скролл-бар (тонкий) ─────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
