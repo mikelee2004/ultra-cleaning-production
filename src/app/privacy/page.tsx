@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import PrivacyPage from '@/components/pages/PrivacyPage';
 
 export const metadata: Metadata = {
-  title: 'Политика конфиденциальности — Ультра Клининг',
+  title: 'Политика конфиденциальности УльтраКлининг Краснодар',
   description:
     'Политика конфиденциальности клининговой компании Ультра Клининг. Порядок обработки и защиты персональных данных пользователей сайта.',
   robots: { index: false, follow: false },
